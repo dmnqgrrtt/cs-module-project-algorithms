@@ -4,8 +4,23 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    count = 2
+    index = 0
+    while count == 2:
+        for num in arr:
+            if arr[index] == num:
+                count -= 1
+        if count == 0:
+            count = 2
+            index += 1
+        else:
+            return arr[index]
 
-    pass
+    
+
+
+
+    
 
 
 if __name__ == '__main__':
